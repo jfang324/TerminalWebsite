@@ -23,7 +23,7 @@ function App() {
     }, [])
 
     useEffect(() => {
-        ;(document.getElementById('hidden-input') as HTMLElement).scrollIntoView()
+        ;(document.getElementById('cursor') as HTMLElement).scrollIntoView()
     }, [cmdHistory])
 
     /**
