@@ -6,6 +6,8 @@ import Response from './components/Response'
 import { descriptions } from './content'
 import './App.css'
 
+import { Analytics } from '@vercel/analytics/react'
+
 function App() {
     /**
      * lineContent - The current text content in the hidden input
@@ -59,6 +61,7 @@ function App() {
 
     return (
         <>
+            <Analytics></Analytics>
             <Container
                 fluid
                 className="bg-black h-100 pt-2"
