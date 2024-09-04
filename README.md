@@ -1,50 +1,67 @@
-# React + TypeScript + Vite
+<br />
+<div align = "center">
+    <a href = "https://jeffery-fang.github.io">
+        <img src = "./public/terminalicon.png" width = "80" height = "80">
+    </a>
+    <p align = "center">
+        A website about me reminiscent of the linux terminal
+    </p>
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h3>
+    About The Project
+</h3>
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I wanted to create a personal project that stands out so I created one that has a style similar to a linux terminal. Just like the a terminal it supports a handful of commands that you can get by running 'help'. Click the icon above to check it out!
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone this repository
 
-- Configure the top-level `parserOptions` property like this:
+    ```sh
+    git clone https://github.com/jfang324/PersonalWebsite.git
+    ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+2. Install NPM packages
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+    ```sh
+    npm install
+    ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+3. Run with Vite if you just want to check it out
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+    ```sh
+    npm run dev
+    ```
+
+4. Or build a static page
+    ```sh
+    npm run build
+    ```
+
+## Gallery & Demonstrations
+
+<img src = "image.png">
+</img>
+
+_Desktop View_
+
+<br />
+<img src = "image-1.png" width = "auto" height = "500">
+</img>
+
+_Mobile View_
+
+<br />
+
+https://github.com/jfang324/PersonalWebsite/assets/126544955/3cc8455f-6f57-4093-a694-decf4c4e2cf2
+
+_Video Demonstration_
+
+## Tools & Technologies
+
+-   React
+-   BootStrap
+-   Vite

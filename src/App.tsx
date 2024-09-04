@@ -1,35 +1,107 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useState } from 'react'
+import { Container, Stack } from 'react-bootstrap'
+import CursorLine from './components/CursorLine'
+import OldCommand from './components/OldCommand'
+import Response from './components/Response'
+import { descriptions } from './content'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+    /**
+     * lineContent - The current text content in the hidden input
+     * cmdHistory - An array of all previous inputs
+     * welcomed - A boolean indicating if the greeting has been displayed
+     */
+    const [lineContent, setLineContent] = useState('')
+    const [cmdHistory, setCmdHistory] = useState<string[]>([])
+    const [welcomed, setWelcomed] = useState(false)
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    useEffect(() => {
+        handleClick()
+    }, [])
+
+    useEffect(() => {
+        ;(document.getElementById('hidden-input') as HTMLElement).scrollIntoView()
+    }, [cmdHistory])
+
+    /**
+     * Focuses on the hidden input
+     */
+    function handleClick(): void {
+        let temp = document.getElementById('hidden-input')!
+        temp.focus()
+    }
+
+    /**
+     * Responds to user input
+     *
+     * @param e - The source of the event
+     */
+    function handleTyping(e: any): void {
+        if (e.key === 'Enter') {
+            if (e.target.value === 'clear') {
+                e.target.value = ''
+                setLineContent('')
+                setCmdHistory([])
+                setWelcomed(true)
+            } else {
+                let newCmdHistory = [...cmdHistory]
+                newCmdHistory.push(e.target.value)
+
+                e.target.value = ''
+                setLineContent('')
+                setCmdHistory(newCmdHistory)
+            }
+        } else {
+            setLineContent(e.target.value)
+        }
+    }
+
+    return (
+        <>
+            <Container
+                fluid
+                className="bg-black h-100 pt-2"
+                style={{
+                    fontSize: '14px',
+                    fontFamily: 'Ubuntu Mono, monospace',
+                    color: 'limegreen',
+                    fontWeight: 300,
+                    minHeight: '100vh',
+                }}
+                onClick={handleClick}
+            >
+                {!welcomed && (
+                    <div>
+                        Welcome to my interactive terminal website. For a list of supported commands type 'help'. Enjoy
+                        your stay!
+                    </div>
+                )}
+                {cmdHistory.map((cmd, index) => {
+                    let temp = cmd.split(' ')
+                    return (
+                        <Stack key={index + ' ' + cmd}>
+                            <OldCommand command={cmd}></OldCommand>
+                            <Response
+                                commandList={Object.keys(descriptions)}
+                                command={temp[0]}
+                                arg={temp[1]}
+                            ></Response>
+                        </Stack>
+                    )
+                })}
+                <CursorLine content={lineContent}></CursorLine>
+                <input
+                    id="hidden-input"
+                    onChange={handleTyping}
+                    onKeyDown={handleTyping}
+                    spellCheck="false"
+                    autoCorrect="false"
+                    autoComplete="false"
+                ></input>
+            </Container>
+        </>
+    )
 }
 
 export default App
