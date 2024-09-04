@@ -23,7 +23,7 @@ function App() {
     }, [])
 
     useEffect(() => {
-        ;(document.getElementById('cursor') as HTMLElement).scrollIntoView()
+        ;(document.getElementById('cursor') as any).scrollIntoViewIfNeeded()
     }, [cmdHistory])
 
     /**
