@@ -1,27 +1,19 @@
 <br />
 <div align = "center">
-    <a href = "https://jeffery-fang.github.io">
+    <a href = "https://jefferyfang.com">
         <img src = "./public/terminalicon.png" width = "80" height = "80">
     </a>
     <p align = "center">
-        A website about me reminiscent of the linux terminal
+        A website about me reminiscent of the linux terminal, click icon for deployment
     </p>
 </div>
-
-<h3>
-    About The Project
-</h3>
-
----
-
-I wanted to create a personal project that stands out so I created one that has a style similar to a linux terminal. Just like the a terminal it supports a handful of commands that you can get by running 'help'. Click the icon above to check it out!
 
 ## Installation
 
 1. Clone this repository
 
     ```sh
-    git clone https://github.com/jfang324/PersonalWebsite.git
+    git clone https://github.com/jfang324/TerminalWebsite.git
     ```
 
 2. Install NPM packages
@@ -43,22 +35,18 @@ I wanted to create a personal project that stands out so I created one that has 
 
 ## Gallery & Demonstrations
 
-<img src = "image.png">
+<img src = "https://github.com/user-attachments/assets/2dbc8579-839f-4486-adaa-7501883a7171">
 </img>
 
 _Desktop View_
 
 <br />
-<img src = "image-1.png" width = "auto" height = "500">
+<img src = "https://github.com/user-attachments/assets/869d1ed0-015f-4939-bee3-63599bc8549a" width = "auto" height = "500">
 </img>
 
 _Mobile View_
 
 <br />
-
-https://github.com/jfang324/PersonalWebsite/assets/126544955/3cc8455f-6f57-4093-a694-decf4c4e2cf2
-
-_Video Demonstration_
 
 ## Tools & Technologies
 
