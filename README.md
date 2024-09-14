@@ -48,6 +48,10 @@ _Mobile View_
 
 <br />
 
+## Contact
+
+Jeffery Fang - Jefferyfang324@gmail.com
+
 ## Tools & Technologies
 
 -   React
