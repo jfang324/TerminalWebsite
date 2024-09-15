@@ -14,7 +14,8 @@ export const projects = [
     ['ShopMart', 'https://github.com/jfang324/ShopMart'],
     ['Specialized Search Engine', 'https://github.com/jfang324/Specialized-Search-Engine'],
     ['Quiz CLI App', 'https://github.com/jfang324/QuizApp'],
-    ['Image to PDF Converter', 'https://github.com/jfang324/image_to_pdf'],
+    ['Image to PDF Converter', 'https://github.com/jfang324/image-to-pdf'],
+    ['MangaDex Downloader', 'https://github.com/jfang324/mangadex-downloader'],
 ]
 
 export const contacts = [
@@ -25,7 +26,7 @@ export const contacts = [
 ]
 
 export const skills = [
-    ['Programming Languages: ', 'JavaScript, TypeScript, HTML/CSS, Python, SQL, C++'],
-    ['Software/Tools: ', 'Postman, VSCode, VirtualBox, Linux, Vite'],
-    ['Technologies/Frameworks: ', 'NodeJS, React, Express, MongoDB, PostgreSQL, Git, AWS, Bootstrap, Jest, pytest'],
+    ['Programming Languages: ', 'JavaScript, TypeScript, HTML/CSS, Python, C++, SQL, Java'],
+    ['Software/Tools: ', 'AWS, Visual Studio Code, Git/GitHub, Vite, Postman, VirtualBox, Linux'],
+    ['Technologies/Frameworks: ', 'NodeJS, Express, React, MongoDB, PostgreSQL, Bootstrap, Jest, Pytest'],
 ]
