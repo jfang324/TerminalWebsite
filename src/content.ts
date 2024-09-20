@@ -10,12 +10,11 @@ export const files = ['skills.txt', 'projects.txt', 'contacts.txt']
 
 export const projects = [
     ['ValoGraphs', 'https://valographs.com'],
+    ['MangaDex Downloader', 'https://github.com/jfang324/mangadex-downloader'],
     ['Personal Website', 'https://github.com/jfang324/TerminalWebsite'],
+    ['Image to PDF Converter', 'https://github.com/jfang324/image-to-pdf'],
     ['ShopMart', 'https://github.com/jfang324/ShopMart'],
     ['Specialized Search Engine', 'https://github.com/jfang324/Specialized-Search-Engine'],
-    ['Quiz CLI App', 'https://github.com/jfang324/QuizApp'],
-    ['Image to PDF Converter', 'https://github.com/jfang324/image-to-pdf'],
-    ['MangaDex Downloader', 'https://github.com/jfang324/mangadex-downloader'],
 ]
 
 export const contacts = [
